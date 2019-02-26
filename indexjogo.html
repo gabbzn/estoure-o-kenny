@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Mate o Kenny - Nível</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="g.ico">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+ 
+		
+		
+    <script language='Javascript'>
+		// essa função serve para recuperar o valor do elemento "nivelJogo"
+function iniciaJogo (){
+	
+	var nivel_jogo = document.getElementById('nivel_jogo').value;
+	
+	// através do objeto window, iremos migrar para a página jogo, onde o jogo irá iniciar. este método não é muito utilizado.
+	// 'jogo.html' + nivel_jogo; fizemos uma concatenação aqui, para conseguir entrar na página jogo e migrar a informação do nível escolhido ao entrar na página
+	
+	window.location.href = 'jogo.html?' + nivel_jogo;
+	// alert(nivel_jogo);
+}
+
+</script>
+	</head>
+
+	<body>
+	<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Gabriela Zancan</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="imagens/profile.gif" alt="">
+      </span>
+    </a
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="aulasdg.html">Curso DG</a>
+        </li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+		 <div class="container-fluid p-0">
+
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+      <div class="w-100">
+        <h2 class="mb-5">Escolha seu nível e estoure o Kenneth "Kenny" McCormick</h2>
+
+		<!--para identificar o elemento na página html, icluíremos o id="nivel_jogo" e para recuperar o valor do elemento, colocaremos no nosso documento js a função document.getElementById-->
+		<select class="custom-select" id="nivel_jogo" >
+		<option value="1">Easy</option>
+		<option value="2">Normal</option>
+		<option value="3">Hard</option></select>
+		<br>
+		<!-- o onclick é um evento que ocorre quando o usuário clica no elemento, a seguir, o evento está chamando nossa função "iniciaJogo"-->
+		<br>
+		<img src="imagens/iniciar.png" class="img-responsive" alt="iniciar" onclick="iniciaJogo()"/>
+		</div>
+		
+<!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+    </body>
+	
+</html>
